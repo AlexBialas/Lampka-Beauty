@@ -1,6 +1,14 @@
+import Hero from "../components/Hero";
+import AboutSection from "../components/AboutSection";
+import ServiceSection from "../components/ServiceSection";
+
 const Home = () => {
   return (
-    <div className="text-pink-600 text-2xl p-6">Welcome to Lampka Beauty</div>
+    <>
+      <Hero />
+      <AboutSection />
+      <ServiceSection />
+    </>
   );
 };
 
