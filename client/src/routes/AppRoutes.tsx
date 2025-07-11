@@ -6,17 +6,20 @@ import Contact from "../pages/Contact";
 import Booking from "../pages/Booking";
 import UserDashboard from "../pages/Dashboard/UserDashboard";
 import AdminDashboard from "../pages/Dashboard/AdminDashboard";
+import MainLayout from "../layouts/MainLayout";
 
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/services" element={<Services />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/booking" element={<Booking />} />
-      <Route path="/dashboard" element={<UserDashboard />} />
-      <Route path="/admin" element={<AdminDashboard />} />
+      <Route element={<MainLayout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/booking" element={<Booking />} />
+        <Route path="/dashboard" element={<UserDashboard />} />
+        <Route path="/admin" element={<AdminDashboard />} />
+      </Route>
     </Routes>
   );
 };
