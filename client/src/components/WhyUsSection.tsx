@@ -1,12 +1,11 @@
 import FadeIn from "./animations/FadeInWhenVisible";
-// Możesz potem podmienić SVG-ikonki zamiast emoji
 
 const benefits = [
   {
     title: "Ekspertyza",
     description:
       "Każda wizyta prowadzona jest przez doświadczonych specjalistów, którzy rozumieją Twoją skórę i potrzeby.",
-    icon: "🧠", // docelowo SVG
+    icon: "🧠",
   },
   {
     title: "Regularność",
