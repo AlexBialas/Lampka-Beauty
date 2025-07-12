@@ -2,11 +2,10 @@ const teamMembers = [
   {
     name: "Anna Lampka",
     role: "Founder & Skin Expert",
-    image: "/assets/anna.jpg", // wrzuć do public/assets albo popraw ścieżkę
+    image: "/assets/anna.jpg",
     bio: "Treating clients holistically is not just my passion – it's my commitment. Your story is unique, and we honour that from the very first consultation.",
-    signature: "/assets/signature.svg", // jeśli masz, albo usuń
+    signature: "/assets/signature.png",
   },
-  // Możesz dodać więcej członkiń zespołu tutaj
 ];
 
 const MeetTheTeamSection = () => {

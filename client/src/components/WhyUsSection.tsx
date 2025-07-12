@@ -1,46 +1,50 @@
+import FadeIn from "./animations/FadeInWhenVisible";
+
 const benefits = [
   {
-    title: "Expertise",
+    title: "Ekspertyza",
     description:
-      "Each visit is led by experienced professionals who understand your skin and needs.",
-    icon: "🧠", // Na razie emoji, potem ikony SVG
+      "Każda wizyta prowadzona jest przez doświadczonych specjalistów, którzy rozumieją Twoją skórę i potrzeby.",
+    icon: "🧠",
   },
   {
-    title: "Consistency",
+    title: "Regularność",
     description:
-      "Regular care builds long-lasting results. Your beauty routine evolves with you.",
+      "Regularna pielęgnacja to trwałe efekty. Twoja rutyna piękna ewoluuje razem z Tobą.",
     icon: "🗓️",
   },
   {
-    title: "Community",
+    title: "Społeczność",
     description:
-      "Be part of a supportive and inspiring beauty community that grows together.",
+      "Dołącz do wspierającej i inspirującej społeczności, która rozwija się razem z Tobą.",
     icon: "💬",
   },
   {
-    title: "Commitment",
+    title: "Zaangażowanie",
     description:
-      "This is self-investment. No apologies. Just dedication to your own care.",
+      "To inwestycja w siebie. Bez wymówek. Tylko troska o własne piękno.",
     icon: "💖",
   },
 ];
 
 const WhyUsSection = () => {
   return (
-    <section className="bg-[#fdfbf6] py-16 px-4 text-center">
-      <h2 className="text-3xl font-semibold mb-10 text-[#2d2d2d]">
-        Why Choose Lampka Beauty?
-      </h2>
-      <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
-        {benefits.map((benefit) => (
-          <div
-            key={benefit.title}
-            className="p-6 bg-white shadow-md rounded-xl"
-          >
-            <div className="text-4xl mb-4">{benefit.icon}</div>
-            <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-            <p className="text-gray-600 text-sm">{benefit.description}</p>
-          </div>
+    <section className="bg-[#fdfbf6] py-20 px-4 text-center">
+      <FadeIn direction="up">
+        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-[#2d2d2d]">
+          Dlaczego warto wybrać Lampka Beauty?
+        </h2>
+      </FadeIn>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        {benefits.map((benefit, index) => (
+          <FadeIn key={benefit.title} direction="up" delay={index * 0.2}>
+            <div className="p-6 bg-white shadow-xl rounded-2xl hover:shadow-2xl transition duration-300 h-full">
+              <div className="text-5xl mb-4">{benefit.icon}</div>
+              <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
+              <p className="text-gray-600 text-sm">{benefit.description}</p>
+            </div>
+          </FadeIn>
         ))}
       </div>
     </section>
