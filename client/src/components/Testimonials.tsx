@@ -90,7 +90,7 @@ const Testimonials = () => {
     infinite: true,
     speed: 600,
     autoplay: true,
-    autoplaySpeed: 8000,
+    autoplaySpeed: 2000,
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,

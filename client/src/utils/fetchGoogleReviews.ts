@@ -1,5 +1,4 @@
 export const fetchGoogleReviews = async () => {
-  // FAKE Google reviews na czas developmentu
   return {
     reviews: [
       {
