@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 
 const MeetTheTeamSection = () => {
   return (
-    <section className="bg-[#fdfbf6] py-24 px-6">
+    <section
+      id="team"
+      className="bg-[#fdfbf6] py-24 px-6 h-screen flex items-center"
+    >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div>
           <div className="w-20 h-1 bg-gradient-to-r from-[#7b9b6d] to-[#d4d4d4] mb-4 rounded" />

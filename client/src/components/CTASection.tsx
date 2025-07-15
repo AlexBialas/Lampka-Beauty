@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const CallbackRequestSection = () => {
   return (
-    <section className="bg-[#404843] py-20 px-4">
+    <section className="bg-[#404843] py-20 px-4 h-screen flex items-center">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 shadow-xl rounded-3xl overflow-hidden bg-white p-6 md:p-12">
         <motion.div
           className="w-full md:w-1/2"

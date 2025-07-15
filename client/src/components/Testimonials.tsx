@@ -104,7 +104,7 @@ const Testimonials = () => {
 
   return (
     <section
-      className="bg-[#2d2d2d] text-white py-20 px-6 relative"
+      className="bg-[#2d2d2d] text-white py-20 px-6 relative h-screen flex items-center"
       id="testimonials"
     >
       <div className="max-w-7xl mx-auto text-center">
