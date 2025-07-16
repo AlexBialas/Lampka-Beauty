@@ -6,7 +6,7 @@ const services = [
     title: "Mezoterapia igłowa",
     description:
       "Odmładzający zabieg na twarz i dekolt. Widoczne efekty już po pierwszej serii.",
-    image: "/assets/mezoterapia.jpg", // Uwaga: bez "/public"
+    image: "/assets/mezoterapia.jpg",
     price: "od 350 PLN",
   },
   {
@@ -29,7 +29,7 @@ const OurServicesSection = () => {
   return (
     <section
       id="services"
-      className="bg-[#f9f9f7] min-h-screen py-20 px-4 flex flex-col justify-center"
+      className="bg-[#f9f9f7] min-h-screen py-24 px-4 flex flex-col justify-center"
     >
       {/* Nagłówek */}
       <div className="max-w-4xl mx-auto text-center mb-16">
@@ -42,26 +42,26 @@ const OurServicesSection = () => {
         </p>
       </div>
 
-      {/* Kafelki usług */}
-      <div className="max-w-7xl mx-auto grid gap-10 md:grid-cols-3 px-4">
+      {/* Karty usług */}
+      <div className="max-w-7xl mx-auto grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4">
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-[#b9c7af] rounded-2xl shadow-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300"
+            className="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:scale-[1.02]"
           >
             <img
               src={service.image}
               alt={service.title}
-              className="w-full h-60 object-cover"
+              className="w-full h-60 object-cover rounded-t-2xl"
             />
             <div className="p-6">
               <h3 className="text-xl font-semibold text-[#1e1e1e] mb-2">
                 {service.title}
               </h3>
-              <p className="text-gray-700 text-sm mb-4">
+              <p className="text-gray-700 text-sm mb-4 leading-relaxed">
                 {service.description}
               </p>
-              <p className="text-black font-semibold text-sm">
+              <p className="text-[#2d2d2d] font-semibold text-sm">
                 {service.price}
               </p>
             </div>
