@@ -3,7 +3,7 @@ export const teamData = [
     name: "Daria Lampka",
     role: "Właścicielka ",
     photo: "/assets/team/daria.jpg",
-    instagram: "https://www.instagram.com/daria_lampka",
+    instagram: "https://www.instagram.com/lampkanaprezydenta/",
     bio: "Daria to założycielka Lampka Beauty – z pasją i precyzją dba o każdy detal. Specjalizuje się w budowaniu pięknych relacji z klientkami.",
   },
   {
