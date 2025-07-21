@@ -7,6 +7,8 @@ import Testimonials from "../components/Testimonials";
 import WhyUsSection from "../components/WhyUsSection";
 import MeetTheTeamSection from "../components/MeetTheTeamSection";
 import InstagramReelsSection from "../components/InstagramReelsSection";
+import GallerySection from "../components/GallerySection";
+import LoyaltyStampSection from "../components/LoyaltyStampSection";
 
 const sections = [
   { component: <Hero />, direction: "up" },
@@ -16,7 +18,9 @@ const sections = [
   { component: <Testimonials />, direction: "left" },
   { component: <WhyUsSection />, direction: "right" },
   { component: <MeetTheTeamSection />, direction: "up" },
-  { component: <InstagramReelsSection />, direction: "left" }, // ← poprawka
+  { component: <InstagramReelsSection />, direction: "left" },
+  { component: <GallerySection />, direction: "right" },
+  { component: <LoyaltyStampSection />, direction: "up" },
 ];
 
 const Home = () => {
