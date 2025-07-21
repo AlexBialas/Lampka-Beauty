@@ -6,6 +6,7 @@ import CTASection from "../components/CTASection";
 import Testimonials from "../components/Testimonials";
 import WhyUsSection from "../components/WhyUsSection";
 import MeetTheTeamSection from "../components/MeetTheTeamSection";
+import InstagramReelsSection from "../components/InstagramReelsSection";
 
 const sections = [
   { component: <Hero />, direction: "up" },
@@ -15,6 +16,7 @@ const sections = [
   { component: <Testimonials />, direction: "left" },
   { component: <WhyUsSection />, direction: "right" },
   { component: <MeetTheTeamSection />, direction: "up" },
+  { component: <InstagramReelsSection />, direction: "left" }, // ← poprawka
 ];
 
 const Home = () => {
