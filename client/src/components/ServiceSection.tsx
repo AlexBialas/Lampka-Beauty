@@ -71,7 +71,7 @@ const OurServicesSection = () => {
       {/* CTA button */}
       <div className="text-center mt-16">
         <Link
-          to="/uslugi"
+          to="/services"
           className="relative group inline-flex items-center justify-center px-8 py-3 overflow-hidden font-semibold text-sm uppercase tracking-widest text-white transition-all duration-300 bg-gradient-to-r from-[#2d2d2d] via-[#3d3d3d] to-[#1a1a1a] rounded-full shadow-lg hover:scale-105 hover:shadow-xl"
         >
           <span className="relative z-10">Zobacz wszystkie zabiegi</span>
