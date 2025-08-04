@@ -105,7 +105,6 @@ const Services = () => {
         </p>
       </div>
 
-      {/* Category filter */}
       <div className="flex flex-wrap justify-center gap-4 mb-12">
         {servicesData.map((section) => (
           <button
@@ -138,14 +137,12 @@ const Services = () => {
                 viewport={{ once: true }}
               >
                 <div className="relative w-full h-64 [transform-style:preserve-3d] transition-transform duration-700 group-hover:[transform:rotateY(180deg)] bg-white rounded-xl shadow-md">
-                  {/* front */}
                   <div className="absolute inset-0 [backface-visibility:hidden] p-6 flex flex-col justify-center items-center rounded-xl bg-white">
                     <h3 className="text-xl font-semibold text-[#2d2d2d] mb-2">
                       {service.name}
                     </h3>
                     <p className="text-gray-500">{service.price}</p>
                   </div>
-                  {/* back */}
                   <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] p-6 flex items-center justify-center rounded-xl bg-[#f7f7f7] text-gray-700">
                     <p className="text-center text-sm">{service.description}</p>
                   </div>
