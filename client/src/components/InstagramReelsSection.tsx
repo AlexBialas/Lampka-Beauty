@@ -1,7 +1,34 @@
 import { motion } from "framer-motion";
+import { useRef, useState } from "react";
 import reelsData from "../data/reelsData";
 
 const InstagramReelsSection = () => {
+  const [playingStates, setPlayingStates] = useState<boolean[]>(
+    Array(reelsData.length).fill(false)
+  );
+  const videoRefs = useRef<HTMLVideoElement[]>([]);
+
+  const toggleVideo = (index: number) => {
+    const video = videoRefs.current[index];
+    if (!video) return;
+
+    if (video.paused) {
+      video.play();
+      updatePlayingState(index, true);
+    } else {
+      video.pause();
+      updatePlayingState(index, false);
+    }
+  };
+
+  const updatePlayingState = (index: number, isPlaying: boolean) => {
+    setPlayingStates((prev) => {
+      const updated = [...prev];
+      updated[index] = isPlaying;
+      return updated;
+    });
+  };
+
   return (
     <section className="bg-[#f8f8f8] py-20 px-4 text-center">
       <motion.h2
@@ -23,22 +50,52 @@ const InstagramReelsSection = () => {
         atmosfera.
       </motion.p>
 
-      <div className="flex flex-wrap justify-center gap-8">
+      <div className="flex flex-wrap justify-center gap-2 md:gap-4">
         {reelsData.map((reel, idx) => (
           <motion.div
             key={idx}
-            className="w-[90%] max-w-[300px] aspect-[9/16] rounded-3xl overflow-hidden shadow-2xl border border-white/60 bg-white mx-auto"
+            className="relative w-[90%] max-w-[300px] aspect-[9/16] rounded-3xl overflow-hidden shadow-2xl border border-white/60 bg-white mx-auto group"
             initial={{ opacity: 0, scale: 0.85 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: idx * 0.2, duration: 0.6 }}
           >
-            <iframe
-              src={`${reel.url}embed`}
-              title={reel.title}
-              className="w-full h-full rounded-3xl"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-              allowFullScreen
-            />
+            <div className="relative w-full h-full">
+              <video
+                ref={(el) => (videoRefs.current[idx] = el!)}
+                id={`video-${idx}`}
+                src={reel.src}
+                controls
+                playsInline
+                className={`w-full h-full object-cover rounded-3xl transition duration-300 ${
+                  !playingStates[idx] ? "blur-sm scale-105 brightness-75" : ""
+                }`}
+                preload="metadata"
+                onEnded={() => updatePlayingState(idx, false)}
+              />
+
+              <button
+                onClick={() => toggleVideo(idx)}
+                className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/50 transition group-hover:opacity-100"
+              >
+                {playingStates[idx] ? (
+                  <svg
+                    className="w-14 h-14 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M6 5h4v14H6zm8 0h4v14h-4z" />
+                  </svg>
+                ) : (
+                  <svg
+                    className="w-14 h-14 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                )}
+              </button>
+            </div>
           </motion.div>
         ))}
       </div>

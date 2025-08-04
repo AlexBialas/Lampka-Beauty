@@ -1,9 +1,10 @@
+// src/data/booksyReviews.ts
+
 export interface Review {
-  author: string;
+  name: string;
   date: string;
-  service: string;
-  employee: string;
-  content: string;
+  text: string;
+  rating: number;
 }
 
 export const booksyReviews: Review[] = [

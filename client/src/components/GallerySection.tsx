@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import galleryData from "../data/galleryData";
+import { Link } from "react-router-dom";
 
 const categories = ["Wszystkie", "Paznokcie", "Rzęsy", "Brwi", "Twarz"];
 
