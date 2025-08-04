@@ -52,7 +52,7 @@ const Navbar = () => {
         {/* Nav – Desktop */}
         <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2">
           <ul className="flex gap-8 text-sm font-light text-[#2d2d2d] tracking-wide uppercase">
-            {isHomePage ? (
+            {isHomePage && (
               <>
                 <li
                   onClick={() => scrollTo("about")}
@@ -79,12 +79,7 @@ const Navbar = () => {
                   Opinie
                 </li>
               </>
-            ) : null}
-            <li>
-              <Link to="/contact" className="hover:text-gray-500">
-                Kontakt
-              </Link>
-            </li>
+            )}
           </ul>
         </nav>
 
@@ -152,11 +147,6 @@ const Navbar = () => {
                 </li>
               </>
             )}
-            <li>
-              <Link to="/contact" className="hover:opacity-70 transition">
-                Kontakt
-              </Link>
-            </li>
 
             <li className="w-full text-center">
               <a
