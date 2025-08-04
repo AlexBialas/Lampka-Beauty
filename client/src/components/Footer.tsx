@@ -42,11 +42,7 @@ const Footer = () => {
                   Strona główna
                 </a>
               </li>
-              <li>
-                <a href="/about" className="hover:text-white">
-                  O nas
-                </a>
-              </li>
+
               <li>
                 <a href="/services" className="hover:text-white">
                   Usługi
@@ -55,11 +51,6 @@ const Footer = () => {
               <li>
                 <a href="/contact" className="hover:text-white">
                   Kontakt
-                </a>
-              </li>
-              <li>
-                <a href="/booking" className="hover:text-white">
-                  Rezerwacja
                 </a>
               </li>
             </ul>
