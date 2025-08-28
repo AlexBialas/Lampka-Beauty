@@ -27,8 +27,8 @@ const Footer = () => {
               relaks łączą się z profesjonalizmem.
             </p>
             <div className="text-sm text-white/60 space-y-1">
-              <p>Email: kontakt@lampkabeauty.pl</p>
-              <p>Telefon: +48 600 000 000</p>
+              <p>Email: lampkabeauty@gmail.com</p>
+              <p>Telefon: +48 517 235 600</p>
             </div>
           </div>
 
@@ -42,11 +42,7 @@ const Footer = () => {
                   Strona główna
                 </a>
               </li>
-              <li>
-                <a href="/about" className="hover:text-white">
-                  O nas
-                </a>
-              </li>
+
               <li>
                 <a href="/services" className="hover:text-white">
                   Usługi
@@ -55,11 +51,6 @@ const Footer = () => {
               <li>
                 <a href="/contact" className="hover:text-white">
                   Kontakt
-                </a>
-              </li>
-              <li>
-                <a href="/booking" className="hover:text-white">
-                  Rezerwacja
                 </a>
               </li>
             </ul>

@@ -7,6 +7,8 @@ import Booking from "../pages/Booking";
 import UserDashboard from "../pages/Dashboard/UserDashboard";
 import AdminDashboard from "../pages/Dashboard/AdminDashboard";
 import MainLayout from "../layouts/MainLayout";
+import MeetTheTeamPage from "../pages/MeetTheTeam";
+import GallerySection from "../pages/GallerySection";
 
 const AppRoutes = () => {
   return (
@@ -19,6 +21,8 @@ const AppRoutes = () => {
         <Route path="/booking" element={<Booking />} />
         <Route path="/dashboard" element={<UserDashboard />} />
         <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/team" element={<MeetTheTeamPage />} />
+        <Route path="/galeria" element={<GallerySection />} />
       </Route>
     </Routes>
   );
